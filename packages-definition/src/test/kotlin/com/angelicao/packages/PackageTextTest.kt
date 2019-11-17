@@ -8,6 +8,6 @@ class PackageTextTest {
     fun packageStr_checkTextIsCorrect() {
         val packageText = PackageText()
 
-        assertEquals("Hello I am a text in packages!", packageText.packageStr)
+        assertEquals("Hello I am a text in packages", packageText.packageStr)
     }
 }
