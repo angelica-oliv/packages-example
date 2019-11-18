@@ -3,7 +3,7 @@ name: Packages CI
 on: [push]
 
 jobs:
-  build:
+  gradle:
 
     runs-on: ubuntu-latest
 
@@ -16,7 +16,10 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x packages-definition/gradlew
     - name: Build with Gradle
-      run: packages-definition/gradlew build
+      uses: eskatos/gradle-command-action@v1
+      with:
+        wrapper-directory: packages-definition/gradlew
+        arguments: build
     - name: Run unit tests
       run: packages-definition/gradlew test
         
