@@ -3,7 +3,7 @@ name: Packages CI
 on: [push]
 
 jobs:
-  gradle:
+  build:
 
     runs-on: ubuntu-latest
 
